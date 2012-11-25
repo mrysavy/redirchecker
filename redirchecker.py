@@ -1,3 +1,5 @@
+#!/bin/env python
+
 import urllib2
 import socket
 from argparse import ArgumentParser
