@@ -55,6 +55,9 @@ class RedirectChecker:
         except socket.error, ( errno, string ):
             self.errno = errno;
             self.errstr = string;
+        except urllib2.URLError, ( reason ):
+            self.errno = None;
+            self.errstr = str(reason);
 
     def getURL( self ):
         return self.url;
